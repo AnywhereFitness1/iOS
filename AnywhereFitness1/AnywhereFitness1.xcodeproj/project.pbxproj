@@ -58,16 +58,56 @@
 		3788BE6423AB1C8F00A0876A /* AnywhereFitness1 */ = {
 			isa = PBXGroup;
 			children = (
+				3788BE7F23AB1F5F00A0876A /* Models */,
+				3788BE8023AB1F6100A0876A /* Model Controllers */,
+				3788BE7E23AB1F5D00A0876A /* Views */,
+				3788BE7D23AB1F5B00A0876A /* Storyboards */,
+				3788BE7C23AB1F5200A0876A /* View Controllers */,
 				3788BE6523AB1C8F00A0876A /* AppDelegate.swift */,
 				3788BE6723AB1C8F00A0876A /* SceneDelegate.swift */,
-				3788BE6923AB1C8F00A0876A /* ViewController.swift */,
-				3788BE6B23AB1C8F00A0876A /* Main.storyboard */,
 				3788BE7123AB1C9200A0876A /* Assets.xcassets */,
 				3788BE7323AB1C9200A0876A /* LaunchScreen.storyboard */,
 				3788BE7623AB1C9200A0876A /* Info.plist */,
 				3788BE6E23AB1C8F00A0876A /* AnywhereFitness1.xcdatamodeld */,
 			);
 			path = AnywhereFitness1;
+			sourceTree = "<group>";
+		};
+		3788BE7C23AB1F5200A0876A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3788BE6923AB1C8F00A0876A /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3788BE7D23AB1F5B00A0876A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3788BE6B23AB1C8F00A0876A /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3788BE7E23AB1F5D00A0876A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3788BE7F23AB1F5F00A0876A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3788BE8023AB1F6100A0876A /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
