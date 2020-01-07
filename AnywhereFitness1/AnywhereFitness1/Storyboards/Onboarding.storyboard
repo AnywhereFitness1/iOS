@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fXl-Di-sS1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="G1R-6U-47y">
+            <objects>
+                <viewController id="fXl-Di-sS1" customClass="OnboardingViewController" customModule="AnywhereFitness1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f9u-su-GNl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vda-df-l5p">
+                                <rect key="frame" x="325" y="64" width="69" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Skip &gt;"/>
+                                <connections>
+                                    <action selector="skipButtonTapped:" destination="fXl-Di-sS1" eventType="touchUpInside" id="Ic5-1c-qud"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k0w-Zz-nq9">
+                                <rect key="frame" x="57" y="253" width="300" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="28A-pS-pCc"/>
+                                    <constraint firstAttribute="height" constant="400" id="meo-9C-Jc1"/>
+                                    <constraint firstAttribute="width" secondItem="k0w-Zz-nq9" secondAttribute="height" multiplier="3:4" id="p0f-Qd-9Iz"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzK-2E-2l8">
+                                <rect key="frame" x="158.5" y="703" width="97" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Continue &gt;"/>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="fXl-Di-sS1" eventType="touchUpInside" id="km4-OZ-dFY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DzK-2E-2l8" firstAttribute="centerX" secondItem="JBw-OX-RTH" secondAttribute="centerX" id="BoI-Xh-uvQ"/>
+                            <constraint firstItem="DzK-2E-2l8" firstAttribute="top" secondItem="k0w-Zz-nq9" secondAttribute="bottom" constant="50" id="Jxq-UQ-Apk"/>
+                            <constraint firstItem="k0w-Zz-nq9" firstAttribute="centerX" secondItem="JBw-OX-RTH" secondAttribute="centerX" id="SOy-Q7-OwS"/>
+                            <constraint firstItem="k0w-Zz-nq9" firstAttribute="centerY" secondItem="JBw-OX-RTH" secondAttribute="centerY" id="gIo-TC-DiU"/>
+                            <constraint firstItem="JBw-OX-RTH" firstAttribute="trailing" secondItem="Vda-df-l5p" secondAttribute="trailing" constant="20" id="j4O-R4-n6x"/>
+                            <constraint firstItem="Vda-df-l5p" firstAttribute="top" secondItem="JBw-OX-RTH" secondAttribute="top" constant="20" id="thl-g7-MMC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JBw-OX-RTH"/>
+                    </view>
+                    <connections>
+                        <outlet property="onboardingTextView1" destination="k0w-Zz-nq9" id="Toa-aw-Tzf"/>
+                        <segue destination="qh4-vM-ogg" kind="presentation" identifier="instructorMainSegue" modalPresentationStyle="fullScreen" id="b6V-A0-coE"/>
+                        <segue destination="G7X-3y-tXg" kind="presentation" identifier="clientMainSegue" id="CGf-HA-tcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2y-9d-nKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="24"/>
+        </scene>
+        <!--InstructorMain-->
+        <scene sceneID="Zn4-sb-EpH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InstructorMain" id="qh4-vM-ogg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkU-BU-JpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="-19"/>
+        </scene>
+        <!--ClientMain-->
+        <scene sceneID="Gad-OL-upB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ClientMain" id="G7X-3y-tXg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPb-1b-YTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="69"/>
+        </scene>
+    </scenes>
+</document>

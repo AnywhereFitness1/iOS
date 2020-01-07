@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="COg-7Y-QqP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Punch-->
+        <scene sceneID="s0F-E9-Twl">
+            <objects>
+                <viewController id="7ud-Xv-6Pa" customClass="InstructorPunchViewController" customModule="AnywhereFitness1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqs-Kj-RGS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pSZ-v1-wlg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Punch" image="creditcard" catalog="system" id="mk7-sl-Kq3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSG-J6-Zlz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="-664"/>
+        </scene>
+        <!--Classes-->
+        <scene sceneID="7iO-LI-bnd">
+            <objects>
+                <viewController id="vee-I6-k76" customClass="InstructorClassesViewController" customModule="AnywhereFitness1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uBr-V4-s0y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kl4-8F-THV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Classes" image="heart.circle.fill" catalog="system" id="Hym-uf-o8J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02f-TX-TBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="-1312"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xSv-fF-uz3">
+            <objects>
+                <tabBarController id="COg-7Y-QqP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dD5-M3-xkG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vee-I6-k76" kind="relationship" relationship="viewControllers" id="3xn-8e-34C"/>
+                        <segue destination="7ud-Xv-6Pa" kind="relationship" relationship="viewControllers" id="SgN-Gu-HhF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrB-cA-D7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172" y="-987"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="creditcard" catalog="system" width="64" height="44"/>
+        <image name="heart.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
