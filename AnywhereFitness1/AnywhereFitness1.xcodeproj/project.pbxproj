@@ -12,6 +12,18 @@
 		3788BE7023AB1C8F00A0876A /* AnywhereFitness1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3788BE6E23AB1C8F00A0876A /* AnywhereFitness1.xcdatamodeld */; };
 		3788BE7223AB1C9200A0876A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3788BE7123AB1C9200A0876A /* Assets.xcassets */; };
 		3788BE7523AB1C9200A0876A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3788BE7323AB1C9200A0876A /* LaunchScreen.storyboard */; };
+		37A32A1123C524A000A693BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A32A1023C524A000A693BC /* Login.storyboard */; };
+		37A32A1323C524AD00A693BC /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A32A1223C524AD00A693BC /* SignUp.storyboard */; };
+		37A32A1523C524BF00A693BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A1423C524BF00A693BC /* LoginViewController.swift */; };
+		37A32A1723C524CA00A693BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A1623C524CA00A693BC /* SignUpViewController.swift */; };
+		37A32A1923C5289B00A693BC /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A32A1823C5289B00A693BC /* Onboarding.storyboard */; };
+		37A32A1B23C52C0E00A693BC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A1A23C52C0E00A693BC /* OnboardingViewController.swift */; };
+		37A32A1D23C52EA100A693BC /* InstructorMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A32A1C23C52EA100A693BC /* InstructorMain.storyboard */; };
+		37A32A2323C52FEC00A693BC /* ClientMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A32A2223C52FEC00A693BC /* ClientMain.storyboard */; };
+		37A32A2723C5380900A693BC /* InstructorClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2623C5380900A693BC /* InstructorClassesViewController.swift */; };
+		37A32A2923C5381700A693BC /* InstructorPunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2823C5381700A693BC /* InstructorPunchViewController.swift */; };
+		37A32A2B23C5383900A693BC /* ClientClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2A23C5383900A693BC /* ClientClassesViewController.swift */; };
+		37A32A2D23C5384500A693BC /* ClientSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2C23C5384500A693BC /* ClientSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +34,18 @@
 		3788BE7123AB1C9200A0876A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3788BE7423AB1C9200A0876A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3788BE7623AB1C9200A0876A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A32A1023C524A000A693BC /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		37A32A1223C524AD00A693BC /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		37A32A1423C524BF00A693BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		37A32A1623C524CA00A693BC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		37A32A1823C5289B00A693BC /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		37A32A1A23C52C0E00A693BC /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		37A32A1C23C52EA100A693BC /* InstructorMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructorMain.storyboard; sourceTree = "<group>"; };
+		37A32A2223C52FEC00A693BC /* ClientMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientMain.storyboard; sourceTree = "<group>"; };
+		37A32A2623C5380900A693BC /* InstructorClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorClassesViewController.swift; sourceTree = "<group>"; };
+		37A32A2823C5381700A693BC /* InstructorPunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorPunchViewController.swift; sourceTree = "<group>"; };
+		37A32A2A23C5383900A693BC /* ClientClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientClassesViewController.swift; sourceTree = "<group>"; };
+		37A32A2C23C5384500A693BC /* ClientSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +81,8 @@
 				3788BE7F23AB1F5F00A0876A /* Models */,
 				3788BE8023AB1F6100A0876A /* Model Controllers */,
 				3788BE7E23AB1F5D00A0876A /* Views */,
-				3788BE7D23AB1F5B00A0876A /* Storyboards */,
 				3788BE7C23AB1F5200A0876A /* View Controllers */,
+				3788BE7D23AB1F5B00A0876A /* Storyboards */,
 				3788BE6523AB1C8F00A0876A /* AppDelegate.swift */,
 				3788BE6723AB1C8F00A0876A /* SceneDelegate.swift */,
 				3788BE7123AB1C9200A0876A /* Assets.xcassets */,
@@ -72,6 +96,13 @@
 		3788BE7C23AB1F5200A0876A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				37A32A1423C524BF00A693BC /* LoginViewController.swift */,
+				37A32A1623C524CA00A693BC /* SignUpViewController.swift */,
+				37A32A1A23C52C0E00A693BC /* OnboardingViewController.swift */,
+				37A32A2623C5380900A693BC /* InstructorClassesViewController.swift */,
+				37A32A2823C5381700A693BC /* InstructorPunchViewController.swift */,
+				37A32A2A23C5383900A693BC /* ClientClassesViewController.swift */,
+				37A32A2C23C5384500A693BC /* ClientSearchViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -79,6 +110,11 @@
 		3788BE7D23AB1F5B00A0876A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				37A32A1023C524A000A693BC /* Login.storyboard */,
+				37A32A1223C524AD00A693BC /* SignUp.storyboard */,
+				37A32A1823C5289B00A693BC /* Onboarding.storyboard */,
+				37A32A1C23C52EA100A693BC /* InstructorMain.storyboard */,
+				37A32A2223C52FEC00A693BC /* ClientMain.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -163,7 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3788BE7523AB1C9200A0876A /* LaunchScreen.storyboard in Resources */,
+				37A32A1923C5289B00A693BC /* Onboarding.storyboard in Resources */,
 				3788BE7223AB1C9200A0876A /* Assets.xcassets in Resources */,
+				37A32A1D23C52EA100A693BC /* InstructorMain.storyboard in Resources */,
+				37A32A1323C524AD00A693BC /* SignUp.storyboard in Resources */,
+				37A32A2323C52FEC00A693BC /* ClientMain.storyboard in Resources */,
+				37A32A1123C524A000A693BC /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,9 +215,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A32A2D23C5384500A693BC /* ClientSearchViewController.swift in Sources */,
+				37A32A2923C5381700A693BC /* InstructorPunchViewController.swift in Sources */,
+				37A32A1523C524BF00A693BC /* LoginViewController.swift in Sources */,
+				37A32A1B23C52C0E00A693BC /* OnboardingViewController.swift in Sources */,
+				37A32A2B23C5383900A693BC /* ClientClassesViewController.swift in Sources */,
 				3788BE7023AB1C8F00A0876A /* AnywhereFitness1.xcdatamodeld in Sources */,
+				37A32A2723C5380900A693BC /* InstructorClassesViewController.swift in Sources */,
 				3788BE6623AB1C8F00A0876A /* AppDelegate.swift in Sources */,
 				3788BE6823AB1C8F00A0876A /* SceneDelegate.swift in Sources */,
+				37A32A1723C524CA00A693BC /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
