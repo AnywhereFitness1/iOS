@@ -27,6 +27,7 @@ class OnboardingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        setUpSubviews()
         if client == true {
             clientOnboardingTextView.alpha = 1
             instructorOnboardingTextView.alpha = 0
@@ -38,14 +39,32 @@ class OnboardingViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func skipButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "mainSegue", sender: self)
+        if instructorOnboardingTextView.alpha == 1 {
+            performSegue(withIdentifier: "instructorMainSegue", sender: self)
+        } else if clientOnboardingTextView.alpha == 1 {
+            performSegue(withIdentifier: "clientMainSegue", sender: self)
+        }
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
-        
+        if instructorOnboardingTextView.alpha == 1 {
+            performSegue(withIdentifier: "instructorMainSegue", sender: self)
+        } else if clientOnboardingTextView.alpha == 1 {
+            performSegue(withIdentifier: "clientMainSegue", sender: self)
+        }
     }
     
     //MARK: - Methods
+    
+    func setUpSubviews() {
+        clientOnboardingTextView.layer.borderColor = UIColor.black.cgColor
+        clientOnboardingTextView.layer.borderWidth = 3.0
+        clientOnboardingTextView.layer.cornerRadius = 10.0
+        
+        instructorOnboardingTextView.layer.borderColor = UIColor.black.cgColor
+        instructorOnboardingTextView.layer.borderWidth = 3.0
+        instructorOnboardingTextView.layer.cornerRadius = 10.0
+    }
     
     // MARK: - Navigation
 

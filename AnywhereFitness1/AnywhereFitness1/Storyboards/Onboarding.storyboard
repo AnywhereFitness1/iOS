@@ -23,16 +23,17 @@
                                     <action selector="skipButtonTapped:" destination="fXl-Di-sS1" eventType="touchUpInside" id="Ic5-1c-qud"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k0w-Zz-nq9">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k0w-Zz-nq9">
                                 <rect key="frame" x="57" y="253" width="300" height="400"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="28A-pS-pCc"/>
                                     <constraint firstAttribute="height" constant="400" id="meo-9C-Jc1"/>
                                     <constraint firstAttribute="width" secondItem="k0w-Zz-nq9" secondAttribute="height" multiplier="3:4" id="p0f-Qd-9Iz"/>
                                 </constraints>
+                                <string key="text">Anywhere Fitness makes it painless for you to attend Fitness classes wherever they might be held. You can easily find out information on classes - location, class size, start time and duration, as well as reschedule or cancel an upcoming appointment or reservation right from the mobile app.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25.5"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzK-2E-2l8">
@@ -43,15 +44,16 @@
                                     <action selector="continueButtonTapped:" destination="fXl-Di-sS1" eventType="touchUpInside" id="km4-OZ-dFY"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Sn-nu-Q0m">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Sn-nu-Q0m">
                                 <rect key="frame" x="57" y="253" width="300" height="400"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="4gh-CI-MrE"/>
                                     <constraint firstAttribute="width" constant="300" id="75b-JE-hTI"/>
                                 </constraints>
+                                <string key="text">Anywhere Fitness makes it painless for you to hold Fitness classes wherever you would like. You can take attendance, request and process payments, create virtual “punch passes” for each type of class offered, alert clients of cancellations or location changes and so much more.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25.5"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
