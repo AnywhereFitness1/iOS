@@ -27,8 +27,8 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HNp-K5-62K">
                                         <rect key="frame" x="76.5" y="110" width="161" height="32"/>
                                         <segments>
-                                            <segment title="Instructor"/>
                                             <segment title="Client"/>
+                                            <segment title="Instructor"/>
                                         </segments>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R8b-oA-w3f">
@@ -65,7 +65,7 @@
                                                     <constraint firstAttribute="width" constant="214" id="RdP-7x-Pz3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -84,7 +84,7 @@
                                                     <constraint firstAttribute="width" constant="214" id="aJ5-nG-17N"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>

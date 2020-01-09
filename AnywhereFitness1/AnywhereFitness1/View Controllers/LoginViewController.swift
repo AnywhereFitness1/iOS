@@ -8,15 +8,21 @@
 
 import UIKit
 
+enum Department: String {
+    case client = "Client"
+    case instructor = "Instructor"
+}
+
 class LoginViewController: UIViewController {
 
     //MARK: - Properties
-    
+    let networkController = NetworkController()
     
     //MARK: - Outlets
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     //MARK: - Views
     
@@ -25,13 +31,30 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - Methods
-
     
+    //MARK: - Actions
     
-
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        guard let username = usernameTextField.text, !username.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty else { return }
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            networkController.login(department: Department.client.rawValue, username: username, password: password)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "clientSegue", sender: self)
+            }
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            networkController.login(department: Department.instructor.rawValue, username: username, password: password)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "instructorSegue", sender: self)
+            }
+        }
+    }
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 
 }

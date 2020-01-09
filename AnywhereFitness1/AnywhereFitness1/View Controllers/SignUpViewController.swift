@@ -12,6 +12,8 @@ class SignUpViewController: UIViewController {
 
     //MARK: - Properties
     
+    let networkController = NetworkController()
+    
     //MARK: - Outlets
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -28,7 +30,20 @@ class SignUpViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func registerButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "onboardingSegue", sender: self)
+        guard let username = usernameTextField.text, !username.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty else { return }
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            networkController.register(department: Department.client.rawValue, username: username, password: password)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "onboardingSegue", sender: self)
+            }
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            networkController.register(department: Department.instructor.rawValue, username: username, password: password)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "onboardingSegue", sender: self)
+            }
+        }
     }
     
     //MARK: - Methods
@@ -37,6 +52,17 @@ class SignUpViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            if segue.identifier == "onboardingSegue" {
+                guard let onboardVC = segue.destination as? OnboardingViewController else { return }
+                onboardVC.client = true
+            }
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            if segue.identifier == "onboardingSegue" {
+                guard let onboardVC = segue.destination as? OnboardingViewController else { return }
+                onboardVC.client = false
+            }
+        }
     }
 
 }

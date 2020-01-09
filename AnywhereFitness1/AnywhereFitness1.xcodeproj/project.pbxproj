@@ -24,6 +24,8 @@
 		37A32A2923C5381700A693BC /* InstructorPunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2823C5381700A693BC /* InstructorPunchViewController.swift */; };
 		37A32A2B23C5383900A693BC /* ClientClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2A23C5383900A693BC /* ClientClassesViewController.swift */; };
 		37A32A2D23C5384500A693BC /* ClientSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2C23C5384500A693BC /* ClientSearchViewController.swift */; };
+		37A32A3023C6E92500A693BC /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2F23C6E92500A693BC /* NetworkController.swift */; };
+		37A32A3223C6E9BF00A693BC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A3123C6E9BF00A693BC /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		37A32A2823C5381700A693BC /* InstructorPunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorPunchViewController.swift; sourceTree = "<group>"; };
 		37A32A2A23C5383900A693BC /* ClientClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientClassesViewController.swift; sourceTree = "<group>"; };
 		37A32A2C23C5384500A693BC /* ClientSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSearchViewController.swift; sourceTree = "<group>"; };
+		37A32A2F23C6E92500A693BC /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		37A32A3123C6E9BF00A693BC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			children = (
 				3788BE7F23AB1F5F00A0876A /* Models */,
 				3788BE8023AB1F6100A0876A /* Model Controllers */,
+				37A32A2E23C6E8F500A693BC /* Networking */,
 				3788BE7E23AB1F5D00A0876A /* Views */,
 				3788BE7C23AB1F5200A0876A /* View Controllers */,
 				3788BE7D23AB1F5B00A0876A /* Storyboards */,
@@ -129,6 +134,7 @@
 		3788BE7F23AB1F5F00A0876A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				37A32A3123C6E9BF00A693BC /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +144,14 @@
 			children = (
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		37A32A2E23C6E8F500A693BC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				37A32A2F23C6E92500A693BC /* NetworkController.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A32A3023C6E92500A693BC /* NetworkController.swift in Sources */,
 				37A32A2D23C5384500A693BC /* ClientSearchViewController.swift in Sources */,
 				37A32A2923C5381700A693BC /* InstructorPunchViewController.swift in Sources */,
+				37A32A3223C6E9BF00A693BC /* Token.swift in Sources */,
 				37A32A1523C524BF00A693BC /* LoginViewController.swift in Sources */,
 				37A32A1B23C52C0E00A693BC /* OnboardingViewController.swift in Sources */,
 				37A32A2B23C5383900A693BC /* ClientClassesViewController.swift in Sources */,
