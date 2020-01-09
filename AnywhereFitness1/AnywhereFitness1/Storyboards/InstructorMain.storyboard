@@ -35,6 +35,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="53r-Xx-aQ6">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="4bP-24-piL">
+                                            <connections>
+                                                <segue destination="iKg-qb-Yof" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="jTV-Bl-Zua"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="J53-Pd-y9P">
                                             <connections>
                                                 <segue destination="oYg-lW-aqU" kind="presentation" identifier="AddClassSegue" modalPresentationStyle="fullScreen" id="5FK-0k-SoJ"/>
@@ -100,6 +105,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02f-TX-TBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="744.92753623188412" y="-1312.5"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="1Y7-Jt-au5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="iKg-qb-Yof" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GS3-76-GXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="-1779"/>
         </scene>
         <!--Instructor Class Detail View Controller-->
         <scene sceneID="kHB-xf-DOl">

@@ -68,7 +68,7 @@ class InstructorClassDetailViewController: UIViewController {
     }
     
 
-    // MARK: - Navigation
+    //MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 

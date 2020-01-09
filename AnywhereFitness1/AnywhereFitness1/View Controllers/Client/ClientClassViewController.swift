@@ -11,6 +11,7 @@ import UIKit
 class ClientClassViewController: UIViewController {
 
     //MARK: - Properties
+    
     private var classes: [Class] = []
     
     //MARK: - Outlets
@@ -22,7 +23,6 @@ class ClientClassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         classesNavBar.topItem?.title = "Classes"
     }
     
@@ -30,7 +30,7 @@ class ClientClassViewController: UIViewController {
     
     //MARK: - Actions
     
-    // MARK: - Navigation
+    //MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ClientClassSegue" {
@@ -56,6 +56,4 @@ extension ClientClassViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
 }

@@ -24,7 +24,7 @@ class InstructorPunchViewController: UIViewController {
     
     //MARK: - Actions
 
-    // MARK: - Navigation
+    //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
