@@ -65,12 +65,4 @@ class OnboardingViewController: UIViewController {
         instructorOnboardingTextView.layer.borderWidth = 3.0
         instructorOnboardingTextView.layer.cornerRadius = 10.0
     }
-    
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-    }
-
-
 }

@@ -26,6 +26,7 @@
 		37A32A2D23C5384500A693BC /* ClientSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2C23C5384500A693BC /* ClientSearchViewController.swift */; };
 		37A32A3023C6E92500A693BC /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2F23C6E92500A693BC /* NetworkController.swift */; };
 		37A32A3223C6E9BF00A693BC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A3123C6E9BF00A693BC /* Token.swift */; };
+		37A32A3423C7A0CF00A693BC /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A3323C7A0CF00A693BC /* Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		37A32A2C23C5384500A693BC /* ClientSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSearchViewController.swift; sourceTree = "<group>"; };
 		37A32A2F23C6E92500A693BC /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		37A32A3123C6E9BF00A693BC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		37A32A3323C7A0CF00A693BC /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				37A32A3123C6E9BF00A693BC /* Token.swift */,
+				37A32A3323C7A0CF00A693BC /* Class.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				37A32A2B23C5383900A693BC /* ClientClassesViewController.swift in Sources */,
 				3788BE7023AB1C8F00A0876A /* AnywhereFitness1.xcdatamodeld in Sources */,
 				37A32A2723C5380900A693BC /* InstructorClassesViewController.swift in Sources */,
+				37A32A3423C7A0CF00A693BC /* Class.swift in Sources */,
 				3788BE6623AB1C8F00A0876A /* AppDelegate.swift in Sources */,
 				3788BE6823AB1C8F00A0876A /* SceneDelegate.swift in Sources */,
 				37A32A1723C524CA00A693BC /* SignUpViewController.swift in Sources */,

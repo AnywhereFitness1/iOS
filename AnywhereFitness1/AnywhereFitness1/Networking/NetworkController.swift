@@ -29,6 +29,7 @@ class NetworkController {
     
     private let baseURL = URL(string: "https://anywhere-fitness92.herokuapp.com/api/auth/")!
     var token: Token?
+    var classes: [Class] = []
     
     func register(department: String, username: String, password: String, completion: @escaping CompletionHandler = { _ in }) {
         let registerURL = baseURL.appendingPathComponent("register")
@@ -105,4 +106,7 @@ class NetworkController {
         }.resume()
     }
     
+    func fetchClasses(completion: @escaping CompletionHandler = { _ in }) {
+        
+    }
 }
