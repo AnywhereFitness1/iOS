@@ -15,12 +15,12 @@ class InstructorClassesViewController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var classesTableView: UITableView!
+    @IBOutlet weak var classesNavigationBar: UINavigationBar!
     
     //MARK: - Views
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     
