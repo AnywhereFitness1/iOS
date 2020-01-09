@@ -31,8 +31,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dpx-9p-Sv1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="53r-Xx-aQ6">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J53-Pd-y9P"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QAi-S2-kd8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClassCell" textLabel="TfC-Pf-Q5A" detailTextLabel="qoP-y0-jPm" style="IBUITableViewCellStyleSubtitle" id="WMO-Jh-QRz">
@@ -64,21 +72,27 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kl4-8F-THV" firstAttribute="bottom" secondItem="QAi-S2-kd8" secondAttribute="bottom" id="OB3-D8-9ST"/>
+                            <constraint firstItem="QAi-S2-kd8" firstAttribute="top" secondItem="Dpx-9p-Sv1" secondAttribute="bottom" id="43C-1Y-2eG"/>
+                            <constraint firstItem="Dpx-9p-Sv1" firstAttribute="leading" secondItem="kl4-8F-THV" secondAttribute="leading" id="H0X-Nc-TPm"/>
                             <constraint firstItem="QAi-S2-kd8" firstAttribute="leading" secondItem="kl4-8F-THV" secondAttribute="leading" id="Uxk-lc-PAB"/>
-                            <constraint firstItem="QAi-S2-kd8" firstAttribute="top" secondItem="kl4-8F-THV" secondAttribute="top" id="Xmc-C2-vpD"/>
+                            <constraint firstItem="Dpx-9p-Sv1" firstAttribute="trailing" secondItem="kl4-8F-THV" secondAttribute="trailing" id="b3i-et-z3e"/>
+                            <constraint firstItem="Dpx-9p-Sv1" firstAttribute="top" secondItem="kl4-8F-THV" secondAttribute="top" id="d3A-Ij-8JR"/>
+                            <constraint firstItem="QAi-S2-kd8" firstAttribute="bottom" secondItem="kl4-8F-THV" secondAttribute="bottom" id="l4y-RG-OVV"/>
                             <constraint firstItem="kl4-8F-THV" firstAttribute="trailing" secondItem="QAi-S2-kd8" secondAttribute="trailing" id="vJd-Mq-cwl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kl4-8F-THV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Classes" image="heart.circle.fill" catalog="system" id="Hym-uf-o8J"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="classesNavigationBar" destination="Dpx-9p-Sv1" id="kEb-20-rdX"/>
                         <outlet property="classesTableView" destination="QAi-S2-kd8" id="uJ3-BE-KAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02f-TX-TBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="-1312"/>
+            <point key="canvasLocation" x="744.92753623188412" y="-1312.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xSv-fF-uz3">

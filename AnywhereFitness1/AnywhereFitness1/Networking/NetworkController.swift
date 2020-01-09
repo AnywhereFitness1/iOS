@@ -106,7 +106,8 @@ class NetworkController {
         }.resume()
     }
     
-    func fetchClasses(completion: @escaping CompletionHandler = { _ in }) {
+    func fetchAllClasses(completion: @escaping CompletionHandler = { _ in }) {
         
     }
+    
 }
