@@ -1,28 +1,29 @@
 //
-//  InstructorClassesViewController.swift
+//  ClientClassViewController.swift
 //  AnywhereFitness1
 //
-//  Created by Bobby Keffury on 1/7/20.
+//  Created by Bobby Keffury on 1/9/20.
 //  Copyright © 2020 Bobby Keffury. All rights reserved.
 //
 
 import UIKit
 
-class InstructorClassesViewController: UIViewController {
+class ClientClassViewController: UIViewController {
 
     //MARK: - Properties
-    var networkController: NetworkController?
-    var classes: [Class] = []
+    private var classes: [Class] = []
     
     //MARK: - Outlets
+    
+    @IBOutlet weak var classesNavBar: UINavigationBar!
     @IBOutlet weak var classesTableView: UITableView!
-    @IBOutlet weak var classesNavigationBar: UINavigationBar!
     
     //MARK: - Views
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        classesNavigationBar.topItem?.title = "Classes"
+        
+        classesNavBar.topItem?.title = "Classes"
     }
     
     //MARK: - Methods
@@ -32,8 +33,8 @@ class InstructorClassesViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ClassDetailSegue" {
-            guard let detailVC = segue.destination as? InstructorClassDetailViewController, let indexPath = classesTableView.indexPathForSelectedRow else { return }
+        if segue.identifier == "ClientClassSegue" {
+            guard let detailVC = segue.destination as? ClientClassDetailViewController, let indexPath = classesTableView.indexPathForSelectedRow else { return }
             let singleClass = classes[indexPath.row]
             detailVC.singleClass = singleClass
         }
@@ -41,7 +42,7 @@ class InstructorClassesViewController: UIViewController {
 
 }
 
-extension InstructorClassesViewController: UITableViewDataSource {
+extension ClientClassViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return classes.count
     }
@@ -55,5 +56,6 @@ extension InstructorClassesViewController: UITableViewDataSource {
         
         return cell
     }
+    
     
 }

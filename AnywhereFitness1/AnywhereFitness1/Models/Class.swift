@@ -15,6 +15,6 @@ struct Class: Codable {
     var Duration: String
     var Intensity: String
     var Location: String
-    var Attendees: Int
-    var Max: Int
+    var AthleteCount: Int
+    var MaxAthleteCount: Int
 }

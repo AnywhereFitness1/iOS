@@ -47,15 +47,17 @@ class InstructorClassDetailViewController: UIViewController {
             currentAthletesTextField.text = ""
             maxAthletesTextField.text = ""
         } else {
-            classNavigationBar.topItem?.title = singleClass?.name
-            nameTextField.text = singleClass?.name
-            typeTextField.text = singleClass?.type
-            startTimeTextField.text = String(describing: singleClass?.Start)
-            durationTextField.text = singleClass?.Duration
-            intensityTextField.text = singleClass?.Intensity
-            locationTextField.text = singleClass?.Location
-            currentAthletesTextField.text = String(describing: singleClass?.Attendees)
-            maxAthletesTextField.text = String(describing: singleClass?.Max)
+            guard let singleClass = singleClass else { return }
+            
+            classNavigationBar.topItem?.title = singleClass.name
+            nameTextField.text = singleClass.name
+            typeTextField.text = singleClass.type
+            startTimeTextField.text = String(describing: singleClass.Start)
+            durationTextField.text = singleClass.Duration
+            intensityTextField.text = singleClass.Intensity
+            locationTextField.text = singleClass.Location
+            currentAthletesTextField.text = String(describing: singleClass.AthleteCount)
+            maxAthletesTextField.text = String(describing: singleClass.MaxAthleteCount)
         }
     }
     
