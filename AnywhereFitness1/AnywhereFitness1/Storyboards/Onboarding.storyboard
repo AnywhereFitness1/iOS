@@ -31,9 +31,9 @@
                                     <constraint firstAttribute="height" constant="400" id="meo-9C-Jc1"/>
                                     <constraint firstAttribute="width" secondItem="k0w-Zz-nq9" secondAttribute="height" multiplier="3:4" id="p0f-Qd-9Iz"/>
                                 </constraints>
-                                <string key="text">Anywhere Fitness makes it painless for you to attend Fitness classes wherever they might be held. You can easily find out information on classes - location, class size, start time and duration, as well as reschedule or cancel an upcoming appointment or reservation right from the mobile app.</string>
+                                <mutableString key="text">Anywhere Fitness makes it painless for you to attend Fitness classes wherever they might be held.   You can:  - Find out information on classes (i.e. location, class size, start time and duration)  - Reschedule or cancel an upcoming class   - Reserve spot in class right from the app.</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzK-2E-2l8">
@@ -51,9 +51,9 @@
                                     <constraint firstAttribute="height" constant="400" id="4gh-CI-MrE"/>
                                     <constraint firstAttribute="width" constant="300" id="75b-JE-hTI"/>
                                 </constraints>
-                                <string key="text">Anywhere Fitness makes it painless for you to hold Fitness classes wherever you would like. You can take attendance, request and process payments, create virtual “punch passes” for each type of class offered, alert clients of cancellations or location changes and so much more.</string>
+                                <mutableString key="text">Anywhere Fitness makes it painless for you to hold Fitness classes wherever you would like.   You can:   - Take attendance   - Request and process payments  - Create virtual “punch passes” for each type of class offered  - Alert clients of cancellations or location changes</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -74,7 +74,7 @@
                         <outlet property="clientOnboardingTextView" destination="k0w-Zz-nq9" id="Toa-aw-Tzf"/>
                         <outlet property="instructorOnboardingTextView" destination="5Sn-nu-Q0m" id="rA8-dA-zzN"/>
                         <segue destination="qh4-vM-ogg" kind="presentation" identifier="instructorMainSegue" modalPresentationStyle="fullScreen" id="b6V-A0-coE"/>
-                        <segue destination="G7X-3y-tXg" kind="presentation" identifier="clientMainSegue" id="CGf-HA-tcE"/>
+                        <segue destination="G7X-3y-tXg" kind="presentation" identifier="clientMainSegue" modalPresentationStyle="fullScreen" id="CGf-HA-tcE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2y-9d-nKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
