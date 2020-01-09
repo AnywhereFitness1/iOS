@@ -13,7 +13,7 @@ struct Class: Codable {
     var type: String
     var Start: Date
     var Duration: String
-    var Level: String
+    var Intensity: String
     var Location: String
     var Attendees: Int
     var Max: Int

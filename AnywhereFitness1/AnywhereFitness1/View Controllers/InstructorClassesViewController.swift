@@ -12,6 +12,7 @@ class InstructorClassesViewController: UIViewController {
 
     //MARK: - Properties
     var networkController: NetworkController?
+    var classes: [Class] = []
     
     //MARK: - Outlets
     @IBOutlet weak var classesTableView: UITableView!
@@ -21,7 +22,7 @@ class InstructorClassesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        classesNavigationBar.topItem?.title = "Classes"
     }
     
     //MARK: - Methods
@@ -31,21 +32,26 @@ class InstructorClassesViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ClassDetailSegue" {
+            guard let detailVC = segue.destination as? InstructorClassDetailViewController, let indexPath = classesTableView.indexPathForSelectedRow else { return }
+            let singleClass = classes[indexPath.row]
+            detailVC.singleClass = singleClass
+        }
     }
 
 }
 
 extension InstructorClassesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return networkController?.classes.count ?? 1
+        return classes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath)
         
-        let singleClass = networkController?.classes[indexPath.row]
-        cell.textLabel?.text = singleClass?.name
-        cell.detailTextLabel?.text = singleClass?.Location
+        let singleClass = classes[indexPath.row]
+        cell.textLabel?.text = singleClass.name
+        cell.detailTextLabel?.text = singleClass.Location
         
         return cell
     }

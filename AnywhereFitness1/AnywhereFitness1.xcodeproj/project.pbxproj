@@ -27,6 +27,7 @@
 		37A32A3023C6E92500A693BC /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A2F23C6E92500A693BC /* NetworkController.swift */; };
 		37A32A3223C6E9BF00A693BC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A3123C6E9BF00A693BC /* Token.swift */; };
 		37A32A3423C7A0CF00A693BC /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32A3323C7A0CF00A693BC /* Class.swift */; };
+		37C727BC23C7A99700A5D557 /* InstructorClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C727BB23C7A99700A5D557 /* InstructorClassDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		37A32A2F23C6E92500A693BC /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		37A32A3123C6E9BF00A693BC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		37A32A3323C7A0CF00A693BC /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		37C727BB23C7A99700A5D557 /* InstructorClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorClassDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				37A32A1623C524CA00A693BC /* SignUpViewController.swift */,
 				37A32A1A23C52C0E00A693BC /* OnboardingViewController.swift */,
 				37A32A2623C5380900A693BC /* InstructorClassesViewController.swift */,
+				37C727BB23C7A99700A5D557 /* InstructorClassDetailViewController.swift */,
 				37A32A2823C5381700A693BC /* InstructorPunchViewController.swift */,
 				37A32A2A23C5383900A693BC /* ClientClassesViewController.swift */,
 				37A32A2C23C5384500A693BC /* ClientSearchViewController.swift */,
@@ -241,6 +244,7 @@
 				37A32A2B23C5383900A693BC /* ClientClassesViewController.swift in Sources */,
 				3788BE7023AB1C8F00A0876A /* AnywhereFitness1.xcdatamodeld in Sources */,
 				37A32A2723C5380900A693BC /* InstructorClassesViewController.swift in Sources */,
+				37C727BC23C7A99700A5D557 /* InstructorClassDetailViewController.swift in Sources */,
 				37A32A3423C7A0CF00A693BC /* Class.swift in Sources */,
 				3788BE6623AB1C8F00A0876A /* AppDelegate.swift in Sources */,
 				3788BE6823AB1C8F00A0876A /* SceneDelegate.swift in Sources */,
