@@ -12,9 +12,10 @@ class ClientClassDetailViewController: UIViewController {
     
     //MARK: - Properties
     
-    var singleClass: Class?
     let clientClassController = ClientClassViewController()
+    let networkController = NetworkController()
     var position: Int?
+    var singleClass: Class?
     
     //MARK: - Outlets
     
@@ -51,8 +52,15 @@ class ClientClassDetailViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func removeButtonTapped(_ sender: Any) {
-        guard let position = position else { return }
+        guard let classy = singleClass, let position = position else { return }
         
+        let count = classy.AthleteCount - 1
+        let updatedClass = Class(id: classy.id, name: classy.name, type: classy.type, Duration: classy.Duration, Intensity: classy.Intensity, Location: classy.Location, AthleteCount: count, MaxAthleteCount: classy.MaxAthleteCount)
+        networkController.updateClass(for: updatedClass) { (error) in
+            if let error = error {
+                print("Error updating class number: \(error)")
+            }
+        }
         clientClassController.clientClasses.remove(at: position)
     }
     

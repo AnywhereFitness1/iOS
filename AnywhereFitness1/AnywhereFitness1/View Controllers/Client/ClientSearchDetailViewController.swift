@@ -14,6 +14,7 @@ class ClientSearchDetailViewController: UIViewController {
     
     var singleClass: Class?
     let clientClassController = ClientClassViewController()
+    let networkController = NetworkController()
     
     //MARK: - Outlets
     
@@ -68,7 +69,18 @@ class ClientSearchDetailViewController: UIViewController {
     
     @IBAction func joinClassButtonTapped(_ sender: Any) {
         guard let classy = singleClass else { return }
-        clientClassController.clientClasses.append(classy)
-        performSegue(withIdentifier: "backSegue", sender: self)
+        
+        let count = classy.AthleteCount + 1
+        let updatedClass = Class(id: classy.id, name: classy.name, type: classy.type, Duration: classy.Duration, Intensity: classy.Intensity, Location: classy.Location, AthleteCount: count, MaxAthleteCount: classy.MaxAthleteCount)
+        networkController.updateClass(for: updatedClass) { (error) in
+            if let error = error {
+                print("Error updating class number: \(error)")
+            }
+        }
+        
+        clientClassController.clientClasses.append(updatedClass)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "backSegue", sender: self)
+        }
     }
 }

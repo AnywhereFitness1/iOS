@@ -41,7 +41,6 @@ class ClientClassViewController: UIViewController {
             detailVC.position = clientClasses.firstIndex(where: { $0.id == singleClass.id })
         }
     }
-
 }
 
 extension ClientClassViewController: UITableViewDataSource {
