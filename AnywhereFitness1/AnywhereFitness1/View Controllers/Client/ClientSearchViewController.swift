@@ -55,3 +55,21 @@ extension ClientSearchViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension ClientSearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let name = searchBar.text else { return }
+
+        networkController.searchForClasses(with: name) { (result) in
+            DispatchQueue.main.async {
+                do {
+                    let result = try result.get()
+                    self.classes = result
+                    self.searchClassesTableView.reloadData()
+                } catch {
+                    print("Error getting search result: \(error)")
+                }
+            }
+        }
+    }
+}

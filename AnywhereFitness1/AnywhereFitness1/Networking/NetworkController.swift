@@ -120,51 +120,45 @@ class NetworkController {
     
     //Client
     
-    func fetchAllClasses(completion: @escaping CompletionHandler = { _ in }) {
+    func searchForClasses(with name: String, completion: @escaping (Result<[Class], NetworkError>) -> Void) {
+        guard let token = token, let searchURL = baseURL?.appendingPathComponent("search") else { return }
         
-        guard let token = token, let fetchURL = baseURL?.appendingPathComponent("classes") else {
-            completion(nil)
-            return
-        }
-        
-        var request = URLRequest(url: fetchURL)
-        request.httpMethod = HTTPMethod.get.rawValue
+        var request = URLRequest(url: searchURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(token.token, forHTTPHeaderField: "Authorization")
+        
+        do {
+            let userParams = ["name":name] as [String:Any]
+            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            request.httpBody = json
+        } catch {
+            print("Error encoding search object: \(error)")
+        }
         
         URLSession.shared.dataTask(with: request) { data, _, error in
             
-            if let error = error {
-                print("Error loading classes:\(error)")
-                completion(error)
+            if let _ = error {
+                completion(.failure(.otherError))
                 return
             }
             
             guard let data = data else {
-                print("Error loading data")
-                completion(error)
+                completion(.failure(.badData))
                 return
             }
             
-            let jsonDecoder = JSONDecoder()
+            let decoder = JSONDecoder()
             
             do {
-                let classes = try jsonDecoder.decode([Class].self, from: data)
-                self.classes = classes
-                completion(nil)
+                let classes = try decoder.decode([Class].self, from: data)
+                completion(.success(classes))
             } catch {
-                print("Error decoding Classes data: \(error)")
-                completion(error)
+                print("Error decoding class object: \(error)")
+                completion(.failure(.noDecode))
                 return
             }
-            
-            completion(nil)
         }.resume()
-    }
-    
-    func reserveSpot(in classy: Class, with token: Token, completion: @escaping CompletionHandler = { _ in }) {
-    }
-    
-    func cancelReservation(for classy: Class, with token: Token, completion: @escaping CompletionHandler = { _ in }) {
     }
     
     
