@@ -120,7 +120,7 @@ class NetworkController {
     
     //Client
     
-    func searchForClasses(with name: String, completion: @escaping (Result<[Class], NetworkError>) -> Void) {
+    func searchForClasses(type: String, completion: @escaping (Result<[Class], NetworkError>) -> Void) {
         guard let token = token, let searchURL = baseURL?.appendingPathComponent("search") else { return }
         
         var request = URLRequest(url: searchURL)
@@ -129,7 +129,7 @@ class NetworkController {
         request.setValue(token.token, forHTTPHeaderField: "Authorization")
         
         do {
-            let userParams = ["name":name] as [String:Any]
+            let userParams = ["type":type] as [String:Any]
             let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
             request.httpBody = json
         } catch {

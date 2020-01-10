@@ -58,9 +58,9 @@ extension ClientSearchViewController: UITableViewDataSource {
 
 extension ClientSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let name = searchBar.text else { return }
+        guard let type = searchBar.text else { return }
 
-        networkController.searchForClasses(with: name) { (result) in
+        networkController.searchForClasses(type: type) { (result) in
             DispatchQueue.main.async {
                 do {
                     let result = try result.get()
