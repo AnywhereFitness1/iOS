@@ -62,15 +62,22 @@ class InstructorClassDetailViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let name = nameTextField.text, let type = typeTextField.text, let duration = durationTextField.text, let intensity = intensityTextField.text, let location = locationTextField.text, let currentAthletes = Int(currentAthletesTextField.text ?? ""), let maxAthletes = Int(maxAthletesTextField.text ?? "") else { return }
+        guard let id = singleClass?.id, let name = nameTextField.text, let type = typeTextField.text, let duration = durationTextField.text, let intensity = intensityTextField.text, let location = locationTextField.text, let currentAthletes = Int(currentAthletesTextField.text ?? ""), let maxAthletes = Int(maxAthletesTextField.text ?? "") else { return }
         
         if singleClass == nil {
-            //Make sure id changes to something else. Have the createClass function generate a new one.
-            
-            let classy = Class(id: 2, name: name, type: type, Duration: duration, Intensity: intensity, Location: location, AthleteCount: currentAthletes, MaxAthleteCount: maxAthletes)
-            networkController.createClass(for: classy)
+            let classy = Class(id: nil, name: name, type: type, Duration: duration, Intensity: intensity, Location: location, AthleteCount: currentAthletes, MaxAthleteCount: maxAthletes)
+            networkController.createClass(for: classy) { (error) in
+                if let error = error {
+                    print("Error updating class: \(error)")
+                }
+            }
         } else {
-            
+            let classy = Class(id: id, name: name, type: type, Duration: duration, Intensity: intensity, Location: location, AthleteCount: currentAthletes, MaxAthleteCount: maxAthletes)
+            networkController.updateClass(for: classy) { (error) in
+                if let error = error {
+                    print("Error updating class: \(error)")
+                }
+            }
         }
     }
     
