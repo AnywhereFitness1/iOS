@@ -13,6 +13,7 @@ class InstructorClassDetailViewController: UIViewController {
     //MARK: - Properties
     
     let networkController = NetworkController()
+    let instructorClassController = InstructorClassesViewController()
     var singleClass: Class?
     
     //MARK: - Outlets
@@ -66,6 +67,7 @@ class InstructorClassDetailViewController: UIViewController {
         
         if singleClass == nil {
             let classy = Class(id: nil, name: name, type: type, Duration: duration, Intensity: intensity, Location: location, AthleteCount: currentAthletes, MaxAthleteCount: maxAthletes)
+            instructorClassController.instructorClasses.append(classy)
             networkController.createClass(for: classy) { (error) in
                 if let error = error {
                     print("Error updating class: \(error)")
