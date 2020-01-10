@@ -120,9 +120,9 @@ class NetworkController {
     
     //Client
     
-    func fetchAllClasses(with token: Token, completion: @escaping CompletionHandler = { _ in }) {
+    func fetchAllClasses(completion: @escaping CompletionHandler = { _ in }) {
         
-        guard let fetchURL = baseURL?.appendingPathComponent("classes") else {
+        guard let token = token, let fetchURL = baseURL?.appendingPathComponent("classes") else {
             completion(nil)
             return
         }
@@ -170,9 +170,9 @@ class NetworkController {
     
     //Instructor
     
-    func createClass(for classy: Class, with token: Token, completion: @escaping CompletionHandler = { _ in }) {
+    func createClass(for classy: Class, completion: @escaping CompletionHandler = { _ in }) {
         
-        guard let createURL = baseURL?.appendingPathComponent("createclass") else { return }
+        guard let token = token, let createURL = baseURL?.appendingPathComponent("createclass") else { return }
         
         var request = URLRequest(url: createURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -205,8 +205,8 @@ class NetworkController {
         }.resume()
     }
     
-    func updateClass(for classy: Class, with token: Token, completion: @escaping CompletionHandler = { _ in }) {
-        guard let id = classy.id, let updateURL = baseURL?.appendingPathComponent("\(id)") else { return }
+    func updateClass(for classy: Class, completion: @escaping CompletionHandler = { _ in }) {
+        guard let id = classy.id, let token = token, let updateURL = baseURL?.appendingPathComponent("\(id)") else { return }
         
         var request = URLRequest(url: updateURL)
         request.httpMethod = HTTPMethod.put.rawValue
@@ -237,8 +237,8 @@ class NetworkController {
         }.resume()
     }
     
-    func deleteClass(for classy: Class, with token: Token, completion: @escaping CompletionHandler = { _ in }) {
-        guard let id = classy.id, let deleteURL = baseURL?.appendingPathComponent("\(id)") else { return }
+    func deleteClass(for classy: Class, completion: @escaping CompletionHandler = { _ in }) {
+        guard let id = classy.id, let token = token, let deleteURL = baseURL?.appendingPathComponent("\(id)") else { return }
         
         var request = URLRequest(url: deleteURL)
         request.httpMethod = HTTPMethod.delete.rawValue

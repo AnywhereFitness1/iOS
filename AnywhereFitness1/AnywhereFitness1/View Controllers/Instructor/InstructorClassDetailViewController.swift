@@ -12,6 +12,7 @@ class InstructorClassDetailViewController: UIViewController {
 
     //MARK: - Properties
     
+    let networkController = NetworkController()
     var singleClass: Class?
     
     //MARK: - Outlets
@@ -64,7 +65,13 @@ class InstructorClassDetailViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let name = nameTextField.text, let type = typeTextField.text, let startTime = startTimeTextField.text, let duration = durationTextField.text, let intensity = intensityTextField.text, let currentAthletes = currentAthletesTextField.text, let maxAthletes = maxAthletesTextField.text else { return }
         
+        if singleClass == nil {
+            
+        } else {
+            
+        }
     }
     
 
