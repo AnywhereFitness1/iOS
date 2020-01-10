@@ -12,7 +12,7 @@ class ClientClassViewController: UIViewController {
 
     //MARK: - Properties
     
-    private var classes: [Class] = []
+    var clientClasses: [Class] = []
     
     //MARK: - Outlets
     
@@ -24,6 +24,7 @@ class ClientClassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         classesNavBar.topItem?.title = "Classes"
+        classesTableView.reloadData()
     }
     
     //MARK: - Methods
@@ -35,8 +36,9 @@ class ClientClassViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ClientClassSegue" {
             guard let detailVC = segue.destination as? ClientClassDetailViewController, let indexPath = classesTableView.indexPathForSelectedRow else { return }
-            let singleClass = classes[indexPath.row]
+            let singleClass = clientClasses[indexPath.row]
             detailVC.singleClass = singleClass
+            detailVC.position = clientClasses.firstIndex(where: { $0.id == singleClass.id })
         }
     }
 
@@ -44,13 +46,13 @@ class ClientClassViewController: UIViewController {
 
 extension ClientClassViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classes.count
+        return clientClasses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath)
         
-        let singleClass = classes[indexPath.row]
+        let singleClass = clientClasses[indexPath.row]
         cell.textLabel?.text = singleClass.name
         cell.detailTextLabel?.text = singleClass.Location
         

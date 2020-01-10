@@ -13,6 +13,8 @@ class ClientClassDetailViewController: UIViewController {
     //MARK: - Properties
     
     var singleClass: Class?
+    let clientClassController = ClientClassViewController()
+    var position: Int?
     
     //MARK: - Outlets
     
@@ -45,4 +47,13 @@ class ClientClassDetailViewController: UIViewController {
         currentAthletesTextField.text = String(describing: singleClass.AthleteCount)
         maxAthletesTextField.text = String(describing: singleClass.MaxAthleteCount)
     }
+    
+    //MARK: - Actions
+    
+    @IBAction func removeButtonTapped(_ sender: Any) {
+        guard let position = position else { return }
+        
+        clientClassController.clientClasses.remove(at: position)
+    }
+    
 }

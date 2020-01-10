@@ -13,6 +13,7 @@ class ClientSearchDetailViewController: UIViewController {
     //MARK: - Properties
     
     var singleClass: Class?
+    let clientClassController = ClientClassViewController()
     
     //MARK: - Outlets
     
@@ -24,6 +25,7 @@ class ClientSearchDetailViewController: UIViewController {
     @IBOutlet weak var currentAthletesTextField: UITextField!
     @IBOutlet weak var maxAthletesTextField: UITextField!
     @IBOutlet weak var searchDetailNavBar: UINavigationBar!
+    @IBOutlet weak var joinClassButton: UIBarButtonItem!
     
     //MARK: - Views
     
@@ -31,6 +33,7 @@ class ClientSearchDetailViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
+        enableJoin()
     }
     
     //MARK: - Methods
@@ -49,6 +52,14 @@ class ClientSearchDetailViewController: UIViewController {
         maxAthletesTextField.text = String(describing: singleClass.MaxAthleteCount)
     }
     
+    func enableJoin() {
+        if currentAthletesTextField.text == maxAthletesTextField.text {
+            joinClassButton.isEnabled = false
+        } else {
+            joinClassButton.isEnabled = true
+        }
+    }
+    
     //MARK: - Actions
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -56,6 +67,8 @@ class ClientSearchDetailViewController: UIViewController {
     }
     
     @IBAction func joinClassButtonTapped(_ sender: Any) {
+        guard let classy = singleClass else { return }
+        clientClassController.clientClasses.append(classy)
         performSegue(withIdentifier: "backSegue", sender: self)
     }
 }

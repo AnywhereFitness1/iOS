@@ -234,6 +234,7 @@
                         <outlet property="currentAthletesTextField" destination="deX-al-cOK" id="gFJ-au-QHi"/>
                         <outlet property="durationTextField" destination="3Jb-Rl-9QX" id="gOI-iV-p99"/>
                         <outlet property="intensityTextField" destination="gNR-NU-1Pa" id="Zcc-Dj-Wzp"/>
+                        <outlet property="joinClassButton" destination="9hx-4A-vHu" id="AAR-7u-atG"/>
                         <outlet property="locationTextField" destination="4pY-Xf-mmh" id="j17-jz-NIF"/>
                         <outlet property="maxAthletesTextField" destination="gVo-5d-Gdf" id="EDj-J7-kUk"/>
                         <outlet property="nameTextField" destination="SFp-G7-act" id="GEa-rR-Lk7"/>
@@ -345,6 +346,11 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Xx2-YQ-1Sc">
                                             <connections>
                                                 <segue destination="qAr-wM-Hox" kind="presentation" identifier="doneSegue" modalPresentationStyle="fullScreen" id="BRQ-c9-O6k"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Remove" id="Gpu-6g-rIq">
+                                            <connections>
+                                                <action selector="removeButtonTapped:" destination="daX-Rk-dC9" id="0GO-ya-2k3"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
