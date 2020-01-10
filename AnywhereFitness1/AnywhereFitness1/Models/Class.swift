@@ -12,7 +12,6 @@ struct Class: Codable {
     var id: Int?
     var name: String
     var type: String
-    var Start: Date
     var Duration: String
     var Intensity: String
     var Location: String

@@ -18,7 +18,6 @@ class ClientClassDetailViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
-    @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var intensityTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
@@ -40,7 +39,6 @@ class ClientClassDetailViewController: UIViewController {
         
         nameTextField.text = singleClass.name
         typeTextField.text = singleClass.type
-        startTimeTextField.text = String(describing: singleClass.Start)
         durationTextField.text = singleClass.Duration
         intensityTextField.text = singleClass.Intensity
         locationTextField.text = singleClass.Location

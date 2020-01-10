@@ -18,7 +18,6 @@ class InstructorClassDetailViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
-    @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var intensityTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
@@ -41,7 +40,6 @@ class InstructorClassDetailViewController: UIViewController {
             classNavigationBar.topItem?.title = "New Class"
             nameTextField.text = ""
             typeTextField.text = ""
-            startTimeTextField.text = ""
             durationTextField.text = ""
             intensityTextField.text = ""
             locationTextField.text = ""
@@ -53,7 +51,6 @@ class InstructorClassDetailViewController: UIViewController {
             classNavigationBar.topItem?.title = singleClass.name
             nameTextField.text = singleClass.name
             typeTextField.text = singleClass.type
-            startTimeTextField.text = String(describing: singleClass.Start)
             durationTextField.text = singleClass.Duration
             intensityTextField.text = singleClass.Intensity
             locationTextField.text = singleClass.Location
@@ -65,10 +62,13 @@ class InstructorClassDetailViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let name = nameTextField.text, let type = typeTextField.text, let startTime = startTimeTextField.text, let duration = durationTextField.text, let intensity = intensityTextField.text, let currentAthletes = currentAthletesTextField.text, let maxAthletes = maxAthletesTextField.text else { return }
+        guard let name = nameTextField.text, let type = typeTextField.text, let duration = durationTextField.text, let intensity = intensityTextField.text, let location = locationTextField.text, let currentAthletes = Int(currentAthletesTextField.text ?? ""), let maxAthletes = Int(maxAthletesTextField.text ?? "") else { return }
         
         if singleClass == nil {
+            //Make sure id changes to something else. Have the createClass function generate a new one.
             
+            let classy = Class(id: 2, name: name, type: type, Duration: duration, Intensity: intensity, Location: location, AthleteCount: currentAthletes, MaxAthleteCount: maxAthletes)
+            networkController.createClass(for: classy)
         } else {
             
         }
