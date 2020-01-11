@@ -73,12 +73,18 @@ class InstructorClassDetailViewController: UIViewController {
                     print("Error updating class: \(error)")
                 }
             }
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "backSegue", sender: self)
+            }
         } else {
             let classy = Class(id: id, name: name, type: type, Duration: duration, Intensity: intensity, Location: location, AthleteCount: currentAthletes, MaxAthleteCount: maxAthletes)
             networkController.updateClass(for: classy) { (error) in
                 if let error = error {
                     print("Error updating class: \(error)")
                 }
+            }
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "backSegue", sender: self)
             }
         }
     }

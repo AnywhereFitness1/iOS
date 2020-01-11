@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37455EBC23CA5C4C0062A012 /* InstructorPunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37455EBB23CA5C4C0062A012 /* InstructorPunchDetailViewController.swift */; };
+		37455EC023CA615F0062A012 /* PunchPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37455EBF23CA615F0062A012 /* PunchPass.swift */; };
 		3788BE6623AB1C8F00A0876A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788BE6523AB1C8F00A0876A /* AppDelegate.swift */; };
 		3788BE6823AB1C8F00A0876A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788BE6723AB1C8F00A0876A /* SceneDelegate.swift */; };
 		3788BE7023AB1C8F00A0876A /* AnywhereFitness1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3788BE6E23AB1C8F00A0876A /* AnywhereFitness1.xcdatamodeld */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37455EBB23CA5C4C0062A012 /* InstructorPunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorPunchDetailViewController.swift; sourceTree = "<group>"; };
+		37455EBF23CA615F0062A012 /* PunchPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchPass.swift; sourceTree = "<group>"; };
 		3788BE6223AB1C8F00A0876A /* AnywhereFitness1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnywhereFitness1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3788BE6523AB1C8F00A0876A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3788BE6723AB1C8F00A0876A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			children = (
 				37A32A3123C6E9BF00A693BC /* Token.swift */,
 				37A32A3323C7A0CF00A693BC /* Class.swift */,
+				37455EBF23CA615F0062A012 /* PunchPass.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				37A32A2623C5380900A693BC /* InstructorClassesViewController.swift */,
 				37C727BB23C7A99700A5D557 /* InstructorClassDetailViewController.swift */,
 				37A32A2823C5381700A693BC /* InstructorPunchViewController.swift */,
+				37455EBB23CA5C4C0062A012 /* InstructorPunchDetailViewController.swift */,
 			);
 			path = Instructor;
 			sourceTree = "<group>";
@@ -275,12 +281,14 @@
 				37C727C323C7B71100A5D557 /* ClientSearchDetailViewController.swift in Sources */,
 				37C727C123C7B6FF00A5D557 /* ClientClassDetailViewController.swift in Sources */,
 				37A32A2723C5380900A693BC /* InstructorClassesViewController.swift in Sources */,
+				37455EBC23CA5C4C0062A012 /* InstructorPunchDetailViewController.swift in Sources */,
 				37C727BC23C7A99700A5D557 /* InstructorClassDetailViewController.swift in Sources */,
 				37A32A3423C7A0CF00A693BC /* Class.swift in Sources */,
 				3788BE6623AB1C8F00A0876A /* AppDelegate.swift in Sources */,
 				3788BE6823AB1C8F00A0876A /* SceneDelegate.swift in Sources */,
 				37C727C723C7BC0C00A5D557 /* ClientSearchViewController.swift in Sources */,
 				37A32A1723C524CA00A693BC /* SignUpViewController.swift in Sources */,
+				37455EC023CA615F0062A012 /* PunchPass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
