@@ -34,10 +34,6 @@ class LoginViewController: UIViewController {
     
     //MARK: - Actions
     
-    
-    
-    //FIX THIS
-    
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let username = usernameTextField.text, !username.isEmpty,
             let password = passwordTextField.text, !password.isEmpty else { return }
@@ -73,10 +69,4 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-
 }
