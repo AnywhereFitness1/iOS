@@ -43,14 +43,32 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text, !password.isEmpty else { return }
         
         if segmentedControl.selectedSegmentIndex == 0 {
-            networkController.login(department: Department.client.rawValue, username: username, password: password)
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "clientSegue", sender: self)
+            networkController.login(department: Department.client.rawValue, username: username, password: password) { (error) in
+                if let error = error {
+                    print("Error logging in: \(error)")
+                    DispatchQueue.main.async {
+                        self.usernameTextField.text = ""
+                        self.passwordTextField.text = ""
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "clientSegue", sender: self)
+                    }
+                }
             }
         } else if segmentedControl.selectedSegmentIndex == 1 {
-            networkController.login(department: Department.instructor.rawValue, username: username, password: password)
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "instructorSegue", sender: self)
+            networkController.login(department: Department.instructor.rawValue, username: username, password: password) { (error) in
+                if let error = error {
+                    print("Error logging in: \(error)")
+                    DispatchQueue.main.async {
+                        self.usernameTextField.text = ""
+                        self.passwordTextField.text = ""
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "instructorSegue", sender: self)
+                    }
+                }
             }
         }
     }
