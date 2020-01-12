@@ -18,6 +18,8 @@ class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var clientOnboardingTextView: UITextView!
     @IBOutlet weak var instructorOnboardingTextView: UITextView!
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     //MARK: - Views
     
@@ -57,12 +59,20 @@ class OnboardingViewController: UIViewController {
     //MARK: - Methods
     
     func setUpSubviews() {
-        clientOnboardingTextView.layer.borderColor = UIColor.black.cgColor
+        clientOnboardingTextView.layer.borderColor = UIColor.white.cgColor
         clientOnboardingTextView.layer.borderWidth = 3.0
         clientOnboardingTextView.layer.cornerRadius = 10.0
         
-        instructorOnboardingTextView.layer.borderColor = UIColor.black.cgColor
+        instructorOnboardingTextView.layer.borderColor = UIColor.white.cgColor
         instructorOnboardingTextView.layer.borderWidth = 3.0
         instructorOnboardingTextView.layer.cornerRadius = 10.0
+        
+        skipButton.layer.borderColor = UIColor.white.cgColor
+        skipButton.layer.borderWidth = 1.5
+        skipButton.layer.cornerRadius = 10.0
+        
+        continueButton.layer.borderColor = UIColor.white.cgColor
+        continueButton.layer.borderWidth = 1.5
+        continueButton.layer.cornerRadius = 10.0
     }
 }

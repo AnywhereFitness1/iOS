@@ -21,6 +21,7 @@ class InstructorPunchDetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var passNavBar: UINavigationBar!
+    @IBOutlet weak var stackView: UIStackView!
     
     //MARK: - Views
     
@@ -33,9 +34,9 @@ class InstructorPunchDetailViewController: UIViewController {
     //MARK: - Methods
     
     func setUpSubviews() {
-        passView.layer.borderColor = UIColor.black.cgColor
-        passView.layer.borderWidth = 3.0
-        passView.layer.cornerRadius = 10.0
+        stackView.layer.borderColor = UIColor.white.cgColor
+        stackView.layer.borderWidth = 3.0
+        stackView.layer.cornerRadius = 10.0
         
         if pass == nil {
             passNavBar.topItem?.title = "Create Pass"

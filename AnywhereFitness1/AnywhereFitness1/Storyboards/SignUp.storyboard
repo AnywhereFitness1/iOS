@@ -7,6 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login-->
+        <scene sceneID="0OZ-1b-res">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="fc7-xc-ejJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Poj-X6-ewr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="607" y="-305"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="ZmW-ok-9Lh">
             <objects>
@@ -21,15 +29,17 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63b-un-A2y">
                                         <rect key="frame" x="72.5" y="0.0" width="169" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HNp-K5-62K">
                                         <rect key="frame" x="76.5" y="110" width="161" height="32"/>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <segments>
                                             <segment title="Client"/>
                                             <segment title="Instructor"/>
                                         </segments>
+                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R8b-oA-w3f">
                                         <rect key="frame" x="50" y="191" width="214" height="62.5"/>
@@ -37,7 +47,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjJ-uO-vyI">
                                                 <rect key="frame" x="0.0" y="0.0" width="214" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQI-2T-rXo">
@@ -56,7 +66,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyF-AE-8Yg">
                                                 <rect key="frame" x="0.0" y="0.0" width="214" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqa-m4-SrO">
@@ -75,7 +85,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEm-EC-ZX2">
                                                 <rect key="frame" x="37.5" y="0.0" width="139.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n2X-tD-VVJ">
@@ -91,27 +101,54 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4u-Gf-Kzg">
-                                <rect key="frame" x="178.5" y="697.5" width="57" height="30"/>
-                                <state key="normal" title="Register"/>
+                                <rect key="frame" x="171" y="697.5" width="72" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="GEw-fH-5DV"/>
+                                    <constraint firstAttribute="width" secondItem="h4u-Gf-Kzg" secondAttribute="height" multiplier="2:1" id="c9W-oX-9k5"/>
+                                    <constraint firstAttribute="width" constant="72" id="wE2-v0-X92"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="registerButtonTapped:" destination="kTc-WE-wSE" eventType="touchUpInside" id="dyi-d1-wAN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xll-JB-Mj5">
+                                <rect key="frame" x="20" y="64" width="66" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="WTn-Mo-G7P"/>
+                                    <constraint firstAttribute="width" constant="66" id="c03-xY-ByV"/>
+                                    <constraint firstAttribute="width" secondItem="xll-JB-Mj5" secondAttribute="height" multiplier="11:6" id="sQj-L3-DPn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="&lt; Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fc7-xc-ejJ" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="Ph5-3n-Exd"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9td-b8-bH3" firstAttribute="trailing" secondItem="JnE-iJ-pnU" secondAttribute="trailing" constant="50" id="BFP-sx-y8y"/>
+                            <constraint firstItem="xll-JB-Mj5" firstAttribute="top" secondItem="9td-b8-bH3" secondAttribute="top" constant="20" id="Ksx-4G-Guf"/>
                             <constraint firstItem="JnE-iJ-pnU" firstAttribute="centerX" secondItem="9td-b8-bH3" secondAttribute="centerX" id="Uag-j4-55g"/>
                             <constraint firstItem="JnE-iJ-pnU" firstAttribute="leading" secondItem="9td-b8-bH3" secondAttribute="leading" constant="50" id="XV3-hu-S9p"/>
                             <constraint firstItem="h4u-Gf-Kzg" firstAttribute="top" secondItem="JnE-iJ-pnU" secondAttribute="bottom" constant="75" id="YNQ-4U-VJQ"/>
                             <constraint firstItem="h4u-Gf-Kzg" firstAttribute="centerX" secondItem="9td-b8-bH3" secondAttribute="centerX" id="doZ-LM-2xq"/>
                             <constraint firstItem="JnE-iJ-pnU" firstAttribute="top" secondItem="9td-b8-bH3" secondAttribute="top" constant="100" id="kY3-bx-dj4"/>
+                            <constraint firstItem="xll-JB-Mj5" firstAttribute="leading" secondItem="9td-b8-bH3" secondAttribute="leading" constant="20" id="y05-UN-WTy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9td-b8-bH3"/>
                     </view>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="n2X-tD-VVJ" id="2RJ-hN-0Bu"/>
+                        <outlet property="loginButton" destination="xll-JB-Mj5" id="zBW-gv-Xj0"/>
                         <outlet property="passwordTextField" destination="qqa-m4-SrO" id="8m5-jW-4wn"/>
+                        <outlet property="registerButton" destination="h4u-Gf-Kzg" id="ImF-JO-3Gc"/>
                         <outlet property="segmentedControl" destination="HNp-K5-62K" id="5Oq-dG-qzl"/>
                         <outlet property="usernameTextField" destination="wQI-2T-rXo" id="Mzd-3x-nVR"/>
                         <segue destination="yus-Mw-VHm" kind="presentation" identifier="onboardingSegue" modalPresentationStyle="fullScreen" id="eLb-Ja-tah"/>

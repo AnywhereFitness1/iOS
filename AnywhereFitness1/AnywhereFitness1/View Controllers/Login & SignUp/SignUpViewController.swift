@@ -20,11 +20,15 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     //MARK: - Views
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpSubviews()
     }
     
     //MARK: - Actions
@@ -47,6 +51,19 @@ class SignUpViewController: UIViewController {
     }
     
     //MARK: - Methods
+    
+    private func setUpSubviews() {
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        
+        registerButton.layer.borderColor = UIColor.white.cgColor
+        registerButton.layer.borderWidth = 1.5
+        registerButton.layer.cornerRadius = 10.0
+        
+        loginButton.layer.borderColor = UIColor.white.cgColor
+        loginButton.layer.borderWidth = 1.5
+        loginButton.layer.cornerRadius = 10.0
+        
+    }
     
 
     // MARK: - Navigation

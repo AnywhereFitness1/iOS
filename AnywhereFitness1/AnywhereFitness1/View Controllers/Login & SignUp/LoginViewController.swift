@@ -23,14 +23,30 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
     //MARK: - Views
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setUpSubviews()
     }
     
     //MARK: - Methods
+    
+    private func setUpSubviews() {
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        
+        loginButton.layer.borderColor = UIColor.white.cgColor
+        loginButton.layer.borderWidth = 1.5
+        loginButton.layer.cornerRadius = 10.0
+        
+        signInButton.layer.borderColor = UIColor.white.cgColor
+        signInButton.layer.borderWidth = 1.5
+        signInButton.layer.cornerRadius = 10.0
+    }
     
     //MARK: - Actions
     

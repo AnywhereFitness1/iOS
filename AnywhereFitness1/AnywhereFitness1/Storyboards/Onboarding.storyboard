@@ -17,47 +17,61 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vda-df-l5p">
                                 <rect key="frame" x="325" y="64" width="69" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Skip &gt;"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="U64-pW-WDw"/>
+                                    <constraint firstAttribute="width" constant="69" id="Vxd-Cl-Bq9"/>
+                                    <constraint firstAttribute="width" secondItem="Vda-df-l5p" secondAttribute="height" multiplier="23:14" id="sQz-3t-oB4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Skip &gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="skipButtonTapped:" destination="fXl-Di-sS1" eventType="touchUpInside" id="Ic5-1c-qud"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k0w-Zz-nq9">
                                 <rect key="frame" x="57" y="253" width="300" height="400"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="28A-pS-pCc"/>
                                     <constraint firstAttribute="height" constant="400" id="meo-9C-Jc1"/>
                                     <constraint firstAttribute="width" secondItem="k0w-Zz-nq9" secondAttribute="height" multiplier="3:4" id="p0f-Qd-9Iz"/>
                                 </constraints>
-                                <mutableString key="text">Anywhere Fitness makes it painless for you to attend Fitness classes wherever they might be held.   You can:  - Find out information on classes (i.e. location, class size, start time and duration)  - Reschedule or cancel an upcoming class   - Reserve spot in class right from the app.</mutableString>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <string key="text">Anywhere Fitness makes it painless for you to attend Fitness classes wherever they might be held.   You can:  - Find out information on classes (i.e. location, class size, start time and duration)  - Reschedule or cancel an upcoming class   - Reserve spot in class right from the app.</string>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzK-2E-2l8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzK-2E-2l8">
                                 <rect key="frame" x="158.5" y="703" width="97" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Continue &gt;"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="5MR-Ec-EVH"/>
+                                    <constraint firstAttribute="height" constant="36" id="fu8-d3-bRf"/>
+                                    <constraint firstAttribute="width" secondItem="DzK-2E-2l8" secondAttribute="height" multiplier="97:36" id="q00-rH-BqP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Continue &gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="continueButtonTapped:" destination="fXl-Di-sS1" eventType="touchUpInside" id="km4-OZ-dFY"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Sn-nu-Q0m">
                                 <rect key="frame" x="57" y="253" width="300" height="400"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="4gh-CI-MrE"/>
                                     <constraint firstAttribute="width" constant="300" id="75b-JE-hTI"/>
                                 </constraints>
-                                <mutableString key="text">Anywhere Fitness makes it painless for you to hold Fitness classes wherever you would like.   You can:   - Take attendance   - Request and process payments  - Create virtual “punch passes” for each type of class offered  - Alert clients of cancellations or location changes</mutableString>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <string key="text">Anywhere Fitness makes it painless for you to hold Fitness classes wherever you would like.   You can:   - Take attendance   - Request and process payments  - Create virtual “punch passes” for each type of class offered  - Alert clients of cancellations or location changes</string>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DzK-2E-2l8" firstAttribute="centerX" secondItem="JBw-OX-RTH" secondAttribute="centerX" id="BoI-Xh-uvQ"/>
                             <constraint firstItem="5Sn-nu-Q0m" firstAttribute="centerX" secondItem="JBw-OX-RTH" secondAttribute="centerX" id="HIe-Mr-Ie4"/>
@@ -72,7 +86,9 @@
                     </view>
                     <connections>
                         <outlet property="clientOnboardingTextView" destination="k0w-Zz-nq9" id="Toa-aw-Tzf"/>
+                        <outlet property="continueButton" destination="DzK-2E-2l8" id="UzK-t5-Zo0"/>
                         <outlet property="instructorOnboardingTextView" destination="5Sn-nu-Q0m" id="rA8-dA-zzN"/>
+                        <outlet property="skipButton" destination="Vda-df-l5p" id="czB-5C-AVM"/>
                         <segue destination="qh4-vM-ogg" kind="presentation" identifier="instructorMainSegue" modalPresentationStyle="fullScreen" id="b6V-A0-coE"/>
                         <segue destination="G7X-3y-tXg" kind="presentation" identifier="clientMainSegue" modalPresentationStyle="fullScreen" id="CGf-HA-tcE"/>
                     </connections>
