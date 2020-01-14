@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     //MARK: - Methods
     
     private func setUpSubviews() {
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
         
         loginButton.layer.borderColor = UIColor.white.cgColor
         loginButton.layer.borderWidth = 1.5
