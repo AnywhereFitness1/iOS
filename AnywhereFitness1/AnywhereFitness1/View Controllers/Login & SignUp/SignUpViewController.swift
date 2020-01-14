@@ -53,7 +53,7 @@ class SignUpViewController: UIViewController {
     //MARK: - Methods
     
     private func setUpSubviews() {
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
         
         registerButton.layer.borderColor = UIColor.white.cgColor
         registerButton.layer.borderWidth = 1.5
