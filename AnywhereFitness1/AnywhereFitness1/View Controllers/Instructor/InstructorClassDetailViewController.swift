@@ -63,9 +63,8 @@ class InstructorClassDetailViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let id = singleClass?.id, let name = nameTextField.text, let type = typeTextField.text, let duration = durationTextField.text, let intensity = intensityTextField.text, let location = locationTextField.text, let currentAthletes = Int(currentAthletesTextField.text ?? ""), let maxAthletes = Int(maxAthletesTextField.text ?? "") else { return }
-        
         if singleClass == nil {
+            guard let name = nameTextField.text, let type = typeTextField.text, let duration = durationTextField.text, let intensity = intensityTextField.text, let location = locationTextField.text, let currentAthletes = Int(currentAthletesTextField.text ?? ""), let maxAthletes = Int(maxAthletesTextField.text ?? "") else { return }
             let classy = Class(id: nil, name: name, type: type, Duration: duration, Intensity: intensity, Location: location, AthleteCount: currentAthletes, MaxAthleteCount: maxAthletes)
             instructorClassController.instructorClasses.append(classy)
             networkController.createClass(for: classy) { (error) in
@@ -77,7 +76,7 @@ class InstructorClassDetailViewController: UIViewController {
                 self.performSegue(withIdentifier: "backSegue", sender: self)
             }
         } else {
-            let classy = Class(id: id, name: name, type: type, Duration: duration, Intensity: intensity, Location: location, AthleteCount: currentAthletes, MaxAthleteCount: maxAthletes)
+            guard let classy = singleClass else { return }
             networkController.updateClass(for: classy) { (error) in
                 if let error = error {
                     print("Error updating class: \(error)")
